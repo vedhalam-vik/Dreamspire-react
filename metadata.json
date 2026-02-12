@@ -1,0 +1,8 @@
+{
+  "name": "Dreamspire Technologies",
+  "description": "Premium corporate website for Dreamspire Technologies Pvt Ltd, specializing in smart infrastructure, automation, and IoT ecosystems with futuristic glassmorphism design.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
