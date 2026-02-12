@@ -2,7 +2,7 @@ name: Deploy React Vite Site
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -22,16 +22,19 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build
+      - name: Build Project
         run: npm run build
 
-      - name: Upload artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Build Files
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./dist
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
